@@ -1,3 +1,4 @@
+use std::io::Write;
 use std::process::exit;
 use std::fs;
 
@@ -29,6 +30,11 @@ fn parse(code: String) {
 
             '*' => {
                 println!("{}", byte_array[index as usize]);
+            }
+
+            '.' => {
+                print!("{}", (byte_array[index as usize] as u8 % 128) as char);
+                std::io::stdout().flush().unwrap();
             }
 
             _ => {}

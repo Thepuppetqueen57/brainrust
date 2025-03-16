@@ -13,3 +13,5 @@
  Use * to output the index's value.
 
  Use . to output the index's ascii value.
+
+ Use , to take user input!

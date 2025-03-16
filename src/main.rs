@@ -37,6 +37,24 @@ fn parse(code: String) {
                 std::io::stdout().flush().unwrap();
             }
 
+            ',' => {
+                let mut cmd: String = Default::default();
+
+                let _ = std::io::stdin().read_line(&mut cmd).unwrap();
+                cmd = cmd.trim().to_string();
+
+                match cmd.parse::<i16>() {
+                    Ok(cmdint) => {
+                        byte_array[index as usize] = cmdint;
+                    }
+
+                    _ => {
+                        println!("Error 1: Failed to convert input to an int!");
+                        exit(1);
+                    }
+                }
+            }
+
             _ => {}
         }
     }

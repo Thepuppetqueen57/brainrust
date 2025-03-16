@@ -1,5 +1,5 @@
 # Brainrust
- BrainRust is a BrainFuck superset made in Rust!
+ BrainRust is a BrainF superset made in Rust!
 
  It has new commands such as `*` which prints a number instead of an ascii character!
 
